@@ -9,9 +9,9 @@ export const readProducts = async (req: Request, res: Response) => {
         conteudo TEXT,
         page_id INT,
         data_criacao TIMESTAMP NOT NULL,
-        data_atualizacao TIMESTAMP NOT NULL,
+        data_atualizacao TIMESTAMP NOT NULL
     );
-     SELECT * FROM notion_clone; `;
+    SELECT * FROM notion_clone; `;
     const movie = await client.query(queryString);
     return res.status(200).json(movie.rows[1]);
 };
