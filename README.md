@@ -4,7 +4,7 @@ Este é o backend do projeto "Notion Clone", uma aplicação web que replica as 
 
 ## Tecnologias Utilizadas
 
-[Veja o diagrama da Tabela aqui.]([URL do link](https://dbdiagram.io/d/6524338effbf5169f0568391))
+[Veja o diagrama da Tabela aqui.](https://dbdiagram.io/d/6524338effbf5169f0568391))
 
 ### Backend
 
