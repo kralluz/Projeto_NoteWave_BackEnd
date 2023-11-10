@@ -4,6 +4,8 @@ Este é o backend do projeto "Notion Clone", uma aplicação web que replica as 
 
 ## Tecnologias Utilizadas
 
+<a href="    https://dbdiagram.io/d/6524338effbf5169f0568391">
+
 ### Backend
 
 - **Node.js**: Ambiente de execução JavaScript.
