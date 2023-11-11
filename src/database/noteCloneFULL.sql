@@ -32,4 +32,4 @@ CREATE TABLE
     "subpage_id" int
   );
 
-ALTER TABLE "notes" ADD CONSTRAINT "notes_subpage_id_fkey" FOREIGN KEY ("subpage_id") REFERENCES "subpages" ("id");
+ALTER TABLE "notes" ADD CONSTRAINT "notes_subpage_id_fkey" FOREIGN KEY ("subpage_id") REFERENCES "subpages" ("id") ON DELETE CASCADE;
