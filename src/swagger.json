@@ -1,0 +1,110 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Note Wave API",
+        "description": "Note Wave documentação da API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3010",
+            "description": "Servidor de desenvolvimento"
+        },
+        {
+            "url": "https://notion-clone-8n54.onrender.com",
+            "description": "Servidor de produção"
+        }
+    ],
+    "paths": {
+        "/notes": {
+            "get": {
+                "tags": [
+                    "Notes"
+                ],
+                "summary": "Listar todas as notas",
+                "description": "Listar todas as notas",
+                "operationId": "listNotes",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/listNotes"
+                                },
+                                "example": [
+                                    {
+                                        "id": "1",
+                                        "title": "Nota 1",
+                                        "content": "conteúdo da nota 1",
+                                        "page_id": "1",
+                                        "createdAt": "2021-01-01T00:00:00.000Z",
+                                        "updatedAt": "2021-01-01T00:00:00.000Z"
+                                    },
+                                    {
+                                        "id": "2",
+                                        "title": "Nota 2",
+                                        "content": "conteúdo da nota 2",
+                                        "page_id": "2",
+                                        "createdAt": "2021-01-01T00:00:00.000Z",
+                                        "updatedAt": "2021-01-01T00:00:00.000Z"
+                                    },
+                                    {
+                                        "id": "3",
+                                        "title": "Nota 3",
+                                        "content": "conteúdo da nota 3",
+                                        "page_id": "3",
+                                        "createdAt": "2021-01-01T00:00:00.000Z",
+                                        "updatedAt": "2021-01-01T00:00:00.000Z"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Erro",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/listNotes"
+                                },
+                                "example": {
+                                    "error": "Erro ao buscar notas"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "listNotes": {
+                "type": "array",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ]
+}
