@@ -22,7 +22,8 @@ A API deste projeto segue os princípios RESTful, utilizando o framework Express
 - **Rotas**: Definidas para recursos específicos (ex: `/notes`, `/pages`), utilizando métodos HTTP padrão (GET, POST, PUT, DELETE).
 - **Controladores**: Lógica de negócios é gerenciada por controladores dedicados, garantindo uma separação clara entre a interface da API e a lógica de negócios.
 - **Middleware**: Uso de middlewares para gerenciamento de autenticação, tratamento de erros e outras funcionalidades transversais.
-- **Documentação da API**: A API é documentada usando Swagger, facilitando a compreensão e teste das rotas disponíveis.  (Acesse: `http://localhost:3010/documentation`)
+- **Documentação da API**: A API é documentada usando Swagger, facilitando a compreensão e teste das rotas disponíveis.
+- (Acesse: `http://localhost:3010/documentation`)
 
 ## Funcionalidades Planejadas
 
