@@ -53,6 +53,6 @@ function initializeTestDb() {
     });
 
     db.close();
-}
+} 
 
 module.exports = initializeTestDb;

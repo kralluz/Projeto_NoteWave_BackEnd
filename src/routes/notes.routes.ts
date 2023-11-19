@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { NotesController } from '../controllers/notes.controller';
+import { PagesController } from '../controllers/notes.controller';
+import { validatePageId } from '../middlewares/globals.middleware';
+import { apiRateLimiter } from '../middlewares/apiRateLimiter.middleware';
 
-export const notesRoutes = Router();
+export const pageRoutes = Router();
 
-notesRoutes.get('/', NotesController.read);
-
-notesRoutes.post('/', NotesController.create);
+pageRoutes.get('/:id',validatePageId, apiRateLimiter, PagesController.readById);

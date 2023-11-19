@@ -1,11 +1,10 @@
 import client from "./config";
-import { insertTextTest, resetTableDevelopment, searchTextTest } from "./functions";
+import { populatingTablesDevelopment, resetTableDevelopment } from "./functions";
 
 const startDatabase = async (): Promise<void> => {
     await client.connect();
     await resetTableDevelopment();
-    await insertTextTest();
-    await searchTextTest();
+    await populatingTablesDevelopment();
     console.log("Database pronta para uso.");
 };
 

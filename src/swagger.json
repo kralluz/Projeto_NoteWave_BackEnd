@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.3",
     "info": {
-        "title": "Note Wave API",
-        "description": "Note Wave documentação da API",
+        "title": "📚Note Wave API 📚",
+        "description": "Note Wave API para gerenciamento de notas",
         "version": "1.0.0"
     },
     "servers": [
@@ -15,64 +15,102 @@
             "description": "Servidor de produção"
         }
     ],
+    "externalDocs": {
+        "description": "Documentação adicional",
+        "url": "https://example.com/documentation"
+    },
     "paths": {
         "/notes": {
             "get": {
-                "tags": [
-                    "Notes"
-                ],
                 "summary": "Listar todas as notas",
-                "description": "Listar todas as notas",
-                "operationId": "listNotes",
                 "responses": {
                     "200": {
-                        "description": "Success",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/listNotes"
-                                },
-                                "example": [
-                                    {
-                                        "id": "1",
-                                        "title": "Nota 1",
-                                        "content": "conteúdo da nota 1",
-                                        "page_id": "1",
-                                        "createdAt": "2021-01-01T00:00:00.000Z",
-                                        "updatedAt": "2021-01-01T00:00:00.000Z"
-                                    },
-                                    {
-                                        "id": "2",
-                                        "title": "Nota 2",
-                                        "content": "conteúdo da nota 2",
-                                        "page_id": "2",
-                                        "createdAt": "2021-01-01T00:00:00.000Z",
-                                        "updatedAt": "2021-01-01T00:00:00.000Z"
-                                    },
-                                    {
-                                        "id": "3",
-                                        "title": "Nota 3",
-                                        "content": "conteúdo da nota 3",
-                                        "page_id": "3",
-                                        "createdAt": "2021-01-01T00:00:00.000Z",
-                                        "updatedAt": "2021-01-01T00:00:00.000Z"
-                                    }
-                                ]
-                            }
-                        }
+                        "description": "Operação bem-sucedida"
                     },
                     "500": {
-                        "description": "Internal Server Erro",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/listNotes"
-                                },
-                                "example": {
-                                    "error": "Erro ao buscar notas"
-                                }
-                            }
-                        }
+                        "description": "Erro interno no servidor"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Criar uma nova nota",
+                "responses": {
+                    "201": {
+                        "description": "Nota criada com sucesso"
+                    },
+                    "400": {
+                        "description": "Dados inválidos fornecidos"
+                    }
+                }
+            }
+        },
+        "/notes/{id}": {
+            "get": {
+                "summary": "Obter nota por ID",
+                "responses": {
+                    "200": {
+                        "description": "Operação bem-sucedida"
+                    },
+                    "404": {
+                        "description": "Nota não encontrada"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Atualizar nota",
+                "responses": {
+                    "200": {
+                        "description": "Nota atualizada com sucesso"
+                    },
+                    "400": {
+                        "description": "Dados inválidos fornecidos"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletar nota",
+                "responses": {
+                    "200": {
+                        "description": "Nota deletada com sucesso"
+                    },
+                    "404": {
+                        "description": "Nota não encontrada"
+                    }
+                }
+            }
+        },
+        "/pages": {
+            "post": {
+                "summary": "Criar página",
+                "responses": {
+                    "201": {
+                        "description": "Página criada com sucesso"
+                    }
+                }
+            }
+        },
+        "/pages/{id}": {
+            "get": {
+                "summary": "Obter página por ID",
+                "responses": {
+                    "200": {
+                        "description": "Operação bem-sucedida"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Atualizar página",
+                "responses": {
+                    "200": {
+                        "description": "Página atualizada com sucesso"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletar página",
+                "responses": {
+                    "200": {
+                        "description": "Página deletada com sucesso"
                     }
                 }
             }
@@ -80,31 +118,78 @@
     },
     "components": {
         "schemas": {
-            "listNotes": {
-                "type": "array",
+            "Note": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Page": {
+                "type": "object",
                 "properties": {
                     "id": {
                         "type": "string"
                     },
                     "title": {
                         "type": "string"
-                    },
-                    "description": {
-                        "type": "string"
-                    },
-                    "createdAt": {
-                        "type": "string"
-                    },
-                    "updatedAt": {
-                        "type": "string"
+                    }
+                }
+            }
+        },
+        "responses": {
+            "ServerError": {
+                "description": "Erro interno no servidor",
+                "content": {
+                    "application/json": {
+                        "example": {
+                            "message": "Erro interno no servidor"
+                        }
+                    }
+                }
+            },
+            "BadRequest": {
+                "description": "Dados inválidos fornecidos",
+                "content": {
+                    "application/json": {
+                        "example": {
+                            "message": "Dados inválidos fornecidos"
+                        }
+                    }
+                }
+            },
+            "NotFound": {
+                "description": "Registro não encontrado",
+                "content": {
+                    "application/json": {
+                        "example": {
+                            "message": "Registro não encontrado"
+                        }
                     }
                 }
             }
         }
     },
+    "tags": [
+        {
+            "name": "Notas",
+            "description": "Operações relacionadas a notas"
+        },
+        {
+            "name": "Páginas",
+            "description": "Operações relacionadas a páginas"
+        }
+    ],
     "security": [
         {
-            "bearerAuth": []
+            "BearerAuth": []
         }
     ]
 }

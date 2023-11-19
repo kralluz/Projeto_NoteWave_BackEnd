@@ -1,4 +1,4 @@
-CREATE TABLE "pages" (
+CREATE TABLE "page" (
   "id" SERIAL PRIMARY KEY,
   "title" VARCHAR(60) NOT NULL,
   "user_id" INT NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE "pages" (
   "page_updated_at" TIMESTAMP DEFAULT (CURRENT_TIMESTAMP)
 );
 
-CREATE TABLE "notes" (
+CREATE TABLE "note" (
   "id" SERIAL PRIMARY KEY,
   "content" TEXT,
   "page_id" INT NOT NULL,
@@ -15,4 +15,4 @@ CREATE TABLE "notes" (
   "notes_updated_at" TIMESTAMP DEFAULT (CURRENT_TIMESTAMP)
 );
 
-ALTER TABLE "notes" ADD FOREIGN KEY ("page_id") REFERENCES "pages" ("id") ON DELETE CASCADE;
+ALTER TABLE "note" ADD FOREIGN KEY ("page_id") REFERENCES "page" ("id") ON DELETE CASCADE;
