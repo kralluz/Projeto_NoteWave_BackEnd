@@ -1,19 +1,18 @@
 import { z } from "zod";
 
 export const noteSchema = z.object({
-    id: z.string().uuid(),
+    id: z.number(),
+    page_id: z.number(),
     content: z.string(),
-    page_id: z.string().uuid(),
     notes_created_at: z.string(),
     notes_updated_at: z.string().nullable(),
 });
 
-export const createNoteSchema = noteSchema.omit({
-    id: true,
-    notes_created_at: true,
+export const createNoteSchema = noteSchema.pick({
+    page_id: true,
+    content: true
 });
 
-export const updateNoteSchema = noteSchema.omit({
+export const updateNoteSchema = noteSchema.partial({
     content: true,
-    notes_updated_at: true
 });

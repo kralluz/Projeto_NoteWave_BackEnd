@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import { PagesController } from '../controllers/notes.controller';
-import { validatePageId } from '../middlewares/globals.middleware';
+import {  bodyValidation, validateNotesId } from '../middlewares/globals.middleware';
 import { apiRateLimiter } from '../middlewares/apiRateLimiter.middleware';
+import { NotesController } from '../controllers/notes.controller';
+import { createNoteSchema } from '../schemas/note.schema';
 
-export const pageRoutes = Router();
+export const notesRoutes = Router();
 
-pageRoutes.get('/:id',validatePageId, apiRateLimiter, PagesController.readById);
+notesRoutes.post('/', bodyValidation(createNoteSchema), apiRateLimiter, NotesController.createNotesByPageId);
+notesRoutes.get('/:id',validateNotesId, apiRateLimiter, NotesController.readNotesByPageId);

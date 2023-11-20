@@ -1,9 +1,8 @@
 import { client } from "../database";
 import { Page, PageResult } from "../interfaces/page.interface";
-import { pageSchema } from "../schemas/page.schema";
 
-class PagesService {
-    static async readById(id: string): Promise<Page> {
+class NotesService {
+    static async readAllNotesByPageId(id: string): Promise<Page> {
         const queryString: string = `
         SELECT
             p.id as "pageId",
@@ -33,6 +32,19 @@ class PagesService {
         const response: Page = queryResult.rows[0];
         return response;
     }
+
+    static async createNotesByPageId(id: string, content: string): Promise<Page> {
+        const queryString: string = `
+        INSERT INTO
+            note (page_id, content)
+        VALUES
+            ($1, $2)
+        RETURNING *;
+        `;
+        const queryResult: PageResult = await client.query(queryString, [id, content]);
+        const response: Page = queryResult.rows[0];
+        return response;
+    }
 }
 
-export { PagesService };
+export { NotesService };

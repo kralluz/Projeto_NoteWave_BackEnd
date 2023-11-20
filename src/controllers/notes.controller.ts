@@ -1,17 +1,19 @@
 import { Request, Response } from "express";
-import { PagesService } from "../services/notes.service";
+import { NotesService } from "../services/notes.service";
 
-class PagesController {
-    static async readById(req: Request, res: Response) {
+class NotesController {
+    static async readNotesByPageId(req: Request, res: Response) {
         const id = req.params.id;
-        const response = await PagesService.readById(id);
+        const response = await NotesService.readAllNotesByPageId(id);
         return res.status(200).json(response);
     }
 
-    static async create(req: Request, res: Response) {
-        /*const response = await createNotesService();
-        return res.status(201).json(response); */
+    static async createNotesByPageId(req: Request, res: Response) {
+        const content = req.body.content;
+        const page_id = req.body.page_id;
+        const response = await NotesService.createNotesByPageId(page_id, content);
+        return res.status(201).json(response);
     }
 }
 
-export { PagesController };
+export { NotesController };

@@ -6,8 +6,9 @@ import winston from "winston";
 import path from "path";
 
 import swaggerDocument from "./swagger.json";
-import { pageRoutes } from "./routes/notes.routes";
 import { handleErrors } from "./middlewares/handleErrors.middleware";
+import { notesRoutes } from "./routes/notes.routes";
+import { pagesRoutes } from "./routes/pages.routes";
 
 // Configuração do Logger
 function createLogger() {
@@ -42,7 +43,8 @@ app.use(
 );
 
 // Rotas
-app.use("/pages", pageRoutes);
+app.use("/pages", pagesRoutes);
+app.use("/notes", notesRoutes);
 
 // Tratamento de Erros
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
@@ -51,5 +53,3 @@ app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use(handleErrors);
-
-module.exports = app;
