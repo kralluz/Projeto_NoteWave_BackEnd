@@ -1,6 +1,9 @@
 
 # Notion Clone - Backend
 
+![Logo da Minha Empresa](https://i.imgur.com/GqyiMrt.jpg)
+
+
 Este é o backend do projeto "Notion Clone", uma aplicação web que replica as principais funcionalidades do Notion, uma plataforma de produtividade popular. O backend é desenvolvido em Node.js com TypeScript e utiliza o banco de dados SQLite com TypeORM.
 
 ## Tecnologias Utilizadas
