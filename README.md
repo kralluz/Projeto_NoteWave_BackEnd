@@ -1,5 +1,5 @@
 
-# Notion Clone - Backend
+# NoteWave Project - Backend
 
 ![Logo da Minha Empresa](https://i.imgur.com/GqyiMrt.jpg)
 
