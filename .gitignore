@@ -2,3 +2,4 @@ node_modules
 .env
 Dist
 combine.log
+.log

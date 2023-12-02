@@ -2,6 +2,25 @@ import { client } from "../database";
 import { Page, PageResult } from "../interfaces/page.interface";
 
 class NotesService {
+    static async createNotesByPageId(
+        id: string,
+        content: string
+    ): Promise<Page> {
+        const queryString: string = `
+        INSERT INTO
+            note (page_id, content)
+        VALUES
+            ($1, $2)
+        RETURNING *;
+        `;
+        const queryResult: PageResult = await client.query(queryString, [
+            id,
+            content,
+        ]);
+        const response: Page = queryResult.rows[0];
+        return response;
+    }
+
     static async readAllNotesByPageId(id: string): Promise<Page> {
         const queryString: string = `
         SELECT
@@ -33,15 +52,33 @@ class NotesService {
         return response;
     }
 
-    static async createNotesByPageId(id: string, content: string): Promise<Page> {
+    static async updateNotesById(pageNumber: string, content: string) {
         const queryString: string = `
-        INSERT INTO
-            note (page_id, content)
-        VALUES
-            ($1, $2)
+        UPDATE
+            note
+        SET
+            content = $1
+        WHERE
+            id = $2
         RETURNING *;
         `;
-        const queryResult: PageResult = await client.query(queryString, [id, content]);
+        const queryResult: PageResult = await client.query(queryString, [
+            content,
+            pageNumber,
+        ]);
+        const response: Page = queryResult.rows[0];
+        return response;
+    }
+
+    static async deleteNotesById(id: string) {
+        const queryString: string = `
+        DELETE FROM
+            note
+        WHERE
+            id = $1
+        RETURNING *;
+        `;
+        const queryResult: PageResult = await client.query(queryString, [id]);
         const response: Page = queryResult.rows[0];
         return response;
     }

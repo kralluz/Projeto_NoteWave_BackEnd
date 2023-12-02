@@ -2,6 +2,33 @@ import { client } from "../database";
 import { Page, PageResult } from "../interfaces/page.interface";
 
 class PageService {
+    static async createPageByUserId(
+        user_id: string,
+        dad_id: string | null,
+        title: string
+    ): Promise<Page> {
+        const queryString: string = `
+        INSERT INTO page (
+            user_id,
+            dad_id,
+            title
+        )
+        VALUES (
+            $1,
+            $2,
+            $3
+        )
+        RETURNING *;
+        `;
+        const queryResult: PageResult = await client.query(queryString, [
+            user_id,
+            dad_id,
+            title,
+        ]);
+        const response: Page = queryResult.rows[0];
+        return response;
+    }
+
     static async readAllPagesByUserId(id: string): Promise<Page> {
         const queryString: string = `
         SELECT
@@ -33,28 +60,37 @@ class PageService {
         return response;
     }
 
-    static async createPageByUserId(
-        user_id: string,
-        dad_id: string | null,
+    static async updatePageByUserId(
+        pageId: string,
         title: string
-    ): Promise<Page> {
+    ) {
         const queryString: string = `
-        INSERT INTO page (
-            user_id,
-            dad_id,
-            title
-        )
-        VALUES (
-            $1,
-            $2,
-            $3
-        )
+        UPDATE
+            page
+        SET
+            title = $1
+        WHERE
+            id = $2
         RETURNING *;
         `;
         const queryResult: PageResult = await client.query(queryString, [
-            user_id,
-            dad_id,
             title,
+            pageId,
+        ]);
+        const response: Page = queryResult.rows[0];
+        return response;
+    }
+
+    static async deletePageByUserId(pageId: string) {
+        const queryString: string = `
+        DELETE FROM
+            page
+        WHERE
+            id = $1
+        RETURNING *;
+        `;
+        const queryResult: PageResult = await client.query(queryString, [
+            pageId,
         ]);
         const response: Page = queryResult.rows[0];
         return response;
