@@ -1,11 +1,13 @@
 import format from "pg-format";
 import { client } from "../database";
 import { CreateUser } from "../interfaces/user.interface";
+import { hash } from "bcryptjs";
 
 class UserService {
     static async createUsers(body: CreateUser): Promise<any> {
         const username = body.username;
         const email = body.email;
+        body.password = await hash(body.password, 13)
         const password = body.password;
         const { rows } = await client.query(
             `INSERT INTO 

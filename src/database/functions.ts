@@ -50,8 +50,8 @@ export const populatingTablesDevelopment = async () => {
     try {
         const queryString = `
         INSERT INTO "user" ("username", "email", "password") VALUES 
+        ('Maria', 'maria.pereira@email.com', 'senha2'),
         ('João Silva', 'joao.silva@email.com', 'senha1'),
-        ('Maria Pereira', 'maria.pereira@email.com', 'senha2'),
         ('Carlos Santos', 'carlos.santos@email.com', 'senha3'),
         ('Ana Costa', 'ana.costa@email.com', 'senha4'),
         ('Pedro Oliveira', 'pedro.oliveira@email.com', 'senha5');

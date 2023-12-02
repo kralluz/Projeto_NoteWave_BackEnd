@@ -15,7 +15,7 @@ class SessionService {
          */
 
         const query: UserResult = await client.query(
-            'SELECT * FROM "users" WHERE "username" = $1;',
+            'SELECT * FROM "user" WHERE "username" = $1;',
             [data.username]
         );
 
