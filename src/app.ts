@@ -10,6 +10,7 @@ import { handleErrors } from "./middlewares/handleErrors.middleware";
 import { noteRoutes } from "./routes/notes.routes";
 import { pageRoutes } from "./routes/pages.routes";
 import { userRoutes } from "./routes/user.routes";
+import { sessionRouter } from "./routes/session.routes";
 
 // Configuração do Logger
 function createLogger() {
@@ -44,6 +45,7 @@ app.use(
 );
 
 // Rotas
+app.use("/", sessionRouter);
 app.use("/user", userRoutes);
 app.use("/page", pageRoutes);
 app.use("/note", noteRoutes);
