@@ -387,3 +387,140 @@
 {"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:01:33:08 +0000] \"DELETE /pages/1/ HTTP/1.1\" - - \"-\" \"insomnia/2023.5.8\""}
 {"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:01:33:42 +0000] \"GET /notes/1/ HTTP/1.1\" 404 26 \"-\" \"insomnia/2023.5.8\""}
 {"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:01:36:54 +0000] \"GET /pages/ HTTP/1.1\" 404 145 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:52:48 +0000] \"GET /pages/3 HTTP/1.1\" 200 326 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:52:58 +0000] \"GET /notes/1/ HTTP/1.1\" 200 308 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:53:03 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 130 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:53:49 +0000] \"GET /notes?noteId=%221%22&pageId=1 HTTP/1.1\" 400 130 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:55:45 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:55:47 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:55:48 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:55:49 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:55:55 +0000] \"GET /notes/1/ HTTP/1.1\" 200 308 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:56:55 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::1 - - [02/Dec/2023:12:56:59 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 130 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::1 - - [02/Dec/2023:12:57:13 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 130 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::1 - - [02/Dec/2023:12:57:14 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 130 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::1 - - [02/Dec/2023:12:57:20 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::1 - - [02/Dec/2023:12:57:21 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:57:39 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 130 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:58:17 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 136 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:58:38 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 83 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:58:49 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 36 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:59:38 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 42 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:12:59:46 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 36 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:02:03 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 36 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:02:29 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 25 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:03:21 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 30 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:03:41 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 30 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::1 - - [02/Dec/2023:13:04:12 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 25 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::1 - - [02/Dec/2023:13:04:12 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 25 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::1 - - [02/Dec/2023:13:04:18 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 20 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::1 - - [02/Dec/2023:13:04:47 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 20 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::1 - - [02/Dec/2023:13:04:49 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 20 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:06:06 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 20 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:08:04 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:08:34 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:09:19 +0000] \"GET /notes/1/ HTTP/1.1\" 200 - \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:09:23 +0000] \"GET /notes/1/ HTTP/1.1\" 200 308 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:09:26 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 404 144 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:12:04 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 30 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:12:59 +0000] \"GET /note?noteId=1&pageId=1 HTTP/1.1\" 404 143 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:13:10 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 30 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:13:46 +0000] \"GET /notes?noteId=1&pageId=1 HTTP/1.1\" 400 30 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:15:10 +0000] \"GET /notes/note?noteId=1&pageId=1 HTTP/1.1\" 200 10 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:15:29 +0000] \"GET /notes/note?noteId=1&pageId=1 HTTP/1.1\" 200 10 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::1 - - [02/Dec/2023:13:15:35 +0000] \"GET /notes/note?noteId=1&pageId=1 HTTP/1.1\" 200 308 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:15:53 +0000] \"GET /notes/1/ HTTP/1.1\" 200 308 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:15:57 +0000] \"GET /notes/3/ HTTP/1.1\" 200 310 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:01 +0000] \"GET /notes/6/ HTTP/1.1\" 404 26 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:04 +0000] \"GET /notes/6/ HTTP/1.1\" 404 26 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:09 +0000] \"GET /notes/7/ HTTP/1.1\" 404 26 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:15 +0000] \"GET /notes/5/ HTTP/1.1\" 200 308 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:24 +0000] \"POST /notes/ HTTP/1.1\" 201 145 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:24 +0000] \"POST /notes/ HTTP/1.1\" 201 145 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:24 +0000] \"POST /notes/ HTTP/1.1\" 201 145 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:24 +0000] \"POST /notes/ HTTP/1.1\" 201 145 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:24 +0000] \"POST /notes/ HTTP/1.1\" 201 146 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:24 +0000] \"POST /notes/ HTTP/1.1\" 201 146 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:25 +0000] \"POST /notes/ HTTP/1.1\" 201 146 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:29 +0000] \"GET /notes/3 HTTP/1.1\" 200 1363 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:39 +0000] \"GET /notes/note?noteId=6&pageId=1 HTTP/1.1\" 200 - \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:16:45 +0000] \"GET /notes/note?noteId=6&pageId=3 HTTP/1.1\" 200 316 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:18:00 +0000] \"GET /pages/page?pageId=6&userId=3 HTTP/1.1\" 400 30 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:23:24 +0000] \"GET /pages/3 HTTP/1.1\" 200 324 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:23:31 +0000] \"GET /pages/page?pageId=3&userId=3 HTTP/1.1\" 400 30 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:24:32 +0000] \"GET /pages/page?pageId=3&userId=3 HTTP/1.1\" 200 10 \"-\" \"insomnia/2023.5.8\""}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"Servidor rodando na porta 3010"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/Dec/2023:13:25:37 +0000] \"GET /pages/page?pageId=3&userId=3 HTTP/1.1\" 200 326 \"-\" \"insomnia/2023.5.8\""}

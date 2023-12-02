@@ -29,6 +29,45 @@ class PageService {
         return response;
     }
 
+    static async readPageByUserId(
+        pageId: string,
+        userId: string
+    ): Promise<Page> {
+        const queryString: string = `
+        SELECT
+            "u"."id" AS "userId",
+            "u"."username" AS "userName",
+            "u"."email" AS "userEmail",
+            "u"."user_created_at" AS "userCreated",
+            "u"."user_updated_at" AS "userUpdated",
+            json_agg(
+                json_build_object(
+                    'id', "p"."id",
+                    'user_id', "p"."user_id",
+                    'dad_id', "p"."dad_id",
+                    'title', "p"."title",
+                    'page_created_at', "p"."page_created_at",
+                    'page_updated_at', "p"."page_updated_at"
+                )
+            ) AS pages
+        FROM
+            "user" AS "u"
+        LEFT JOIN "page" AS "p" ON "u"."id" = "p"."user_id"
+        WHERE
+            "u"."id" = $1
+        AND 
+            "p"."id" = $2
+        GROUP BY
+            "u"."id";
+        `;
+        const queryResult: PageResult = await client.query(queryString, [
+            pageId,
+            userId,
+        ]);
+        const response: Page = queryResult.rows[0];
+        return response;
+    }
+
     static async readAllPagesByUserId(id: string): Promise<Page> {
         const queryString: string = `
         SELECT

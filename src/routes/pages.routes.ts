@@ -16,7 +16,7 @@ pagesRoutes.post(
     pagesController.createPageByUserId
 );
 
-// pagesRoutes.get( "/:id", apiRateLimiter, validatePagesId, pagesController.readPageByUserId);
+pagesRoutes.get( "/page", apiRateLimiter, pagesController.readPageByUserId);
 
 pagesRoutes.get(
     "/:id",

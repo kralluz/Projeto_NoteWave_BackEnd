@@ -10,7 +10,10 @@ class NotesController {
     }
 
     static async readNotesByPageId(req: Request, res: Response) {
-        return res.status(200).json({ message: "readAllNotesByPageId" });
+        const pageId = String(req.query.pageId);
+        const noteId = String(req.query.noteId);
+        const response = await NotesService.readNotesByPageId(pageId, noteId);
+        return res.status(200).json(response);
     }
 
     static async readAllNotesByPageId(req: Request, res: Response) {
@@ -20,7 +23,7 @@ class NotesController {
     }
 
     static async updateNotesById(req: Request, res: Response) {
-        const noteId = req.params.id;
+        const noteId: string = req.params.id;
         const content = req.body.content;
         const response = await NotesService.updateNotesById(noteId, content);
         return res.status(200).json(response);

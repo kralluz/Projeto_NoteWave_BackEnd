@@ -98,7 +98,6 @@ export const validateNotesId = async (
     SELECT * FROM note WHERE id = $1;
     `;
     const queryResult: QueryResult = await client.query(queryString, [id]);
-
     if (queryResult.rowCount === 0)
         return res.status(404).json({ error: "Page not found" });
 

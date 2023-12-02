@@ -14,8 +14,11 @@ class pagesController {
         return res.status(201).json(response);
     }
 
-    static readPageByUserId(req: Request, res: Response) {
-        return res.status(200).json({ message: "readPageByUserId" });
+    static async readPageByUserId(req: Request, res: Response) {
+        const userId = String(req.query.userId);
+        const pageId = String(req.query.pageId);
+        const response = await PageService.readPageByUserId(pageId, userId);
+        return res.status(200).json(response);
     }
 
     static async readAllPagesByUserId(req: Request, res: Response) {
