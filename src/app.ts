@@ -7,8 +7,9 @@ import path from "path";
 
 import swaggerDocument from "./swagger.json";
 import { handleErrors } from "./middlewares/handleErrors.middleware";
-import { notesRoutes } from "./routes/notes.routes";
-import { pagesRoutes } from "./routes/pages.routes";
+import { noteRoutes } from "./routes/notes.routes";
+import { pageRoutes } from "./routes/pages.routes";
+import { userRoutes } from "./routes/user.routes";
 
 // Configuração do Logger
 function createLogger() {
@@ -43,10 +44,10 @@ app.use(
 );
 
 // Rotas
-app.use("/pages", pagesRoutes);
-app.use("/notes", notesRoutes);
+app.use("/user", userRoutes);
+app.use("/page", pageRoutes);
+app.use("/note", noteRoutes);
 
-// Tratamento de Erros
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
     logger.error(error.stack);
     res.status(500).send("Internal server error");

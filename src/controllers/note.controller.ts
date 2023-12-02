@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { NotesService } from "../services/notes.service";
+import { NotesService } from "../services/note.services";
 
 class NotesController {
     static async createNotesByPageId(req: Request, res: Response) {

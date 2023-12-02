@@ -9,6 +9,7 @@ export const resetTableDevelopment = async () => {
         
         CREATE TABLE "user" (
             "id" SERIAL PRIMARY KEY,
+            "is_admin" BOOLEAN DEFAULT FALSE,
             "username" VARCHAR(60) NOT NULL,
             "email" VARCHAR(30) NOT NULL,
             "password" VARCHAR(400),
@@ -33,7 +34,7 @@ export const resetTableDevelopment = async () => {
             "notes_updated_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
         
-        ALTER TABLE "page" ADD FOREIGN KEY ("user_id") REFERENCES "user" ("id");
+        ALTER TABLE "page" ADD FOREIGN KEY ("user_id") REFERENCES "user" ("id") ON DELETE CASCADE;
         
         ALTER TABLE "note" ADD FOREIGN KEY ("page_id") REFERENCES "page" ("id") ON DELETE CASCADE;
         
@@ -122,7 +123,7 @@ export const resetTableProduction = async () => {
             "notes_updated_at" TIMESTAMP DEFAULT (CURRENT_TIMESTAMP)
         );
         
-        ALTER TABLE "page" ADD FOREIGN KEY ("user_id") REFERENCES "user" ("id");
+        ALTER TABLE "page" ADD FOREIGN KEY ("user_id") REFERENCES "user" ("id") ON DELETE CASCADE;
         
         ALTER TABLE "note" ADD FOREIGN KEY ("page_id") REFERENCES "page" ("id") ON DELETE CASCADE;
         

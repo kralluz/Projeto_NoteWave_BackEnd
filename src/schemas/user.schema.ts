@@ -2,32 +2,32 @@ import { z } from "zod";
 
 export const userSchema = z.object({
     id: z.number().int().positive(),
-    name: z.string().max(45),
+    is_admin: z.boolean().optional(),
+    username: z.string().max(45),
     email: z.string().max(45).email(),
     password: z.string().max(120),
-    admin: z.boolean().optional(),
     createdAt: z.string(),
     updatedAt: z.string(),
     deletedAt: z.string().nullable(),
 });
 
-export const userResponseSchema = userSchema.pick({
-    id: true,
-    name: true,
-    email: true,
-    admin: true,
-    createdAt: true,
-    updatedAt: true,
-    deletedAt: true,
+export const userResponseSchema = z.object({
+    id: z.number().int().positive(),
+    is_admin: z.boolean().optional(),
+    username: z.string().max(45),
+    email: z.string().max(45).email(),
+    createdAt: z.string(),
+    updatedAt: z.string(),
+    deletedAt: z.string().nullable(),
 });
 
-export const userCreateSchema = userSchema.pick({
-    name: true,
+export const createUserSchema = userSchema.pick({
+    username: true,
     email: true,
     password: true,
 });
 
-export const userReadSchema = userResponseSchema.array();
+export const readAllUsersSchema = userResponseSchema.array();
 
 export const userUpdateSchema = userSchema.partial();
 

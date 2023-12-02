@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { PageService } from "../services/pages.service";
+import { PageService } from "../services/page.services";
 
 class pagesController {
     static async createPageByUserId(req: Request, res: Response) {

@@ -7,32 +7,32 @@ import {
 } from "../middlewares/globals.middleware";
 import { createPageSchema } from "../schemas/page.schema";
 
-export const pagesRoutes: Router = Router();
+export const pageRoutes: Router = Router();
 
-pagesRoutes.post(
+pageRoutes.post(
     "/",
     bodyValidation(createPageSchema),
     apiRateLimiter,
     pagesController.createPageByUserId
 );
 
-pagesRoutes.get( "/page", apiRateLimiter, pagesController.readPageByUserId);
+pageRoutes.get( "/page", apiRateLimiter, pagesController.readPageByUserId);
 
-pagesRoutes.get(
+pageRoutes.get(
     "/:id",
     apiRateLimiter,
     validatePagesId,
     pagesController.readAllPagesByUserId
 );
 
-pagesRoutes.patch(
+pageRoutes.patch(
     "/:id",
     apiRateLimiter,
     validatePagesId,
     pagesController.updatePageByUserId
 );
 
-pagesRoutes.delete(
+pageRoutes.delete(
     "/:id",
     apiRateLimiter,
     validatePagesId,

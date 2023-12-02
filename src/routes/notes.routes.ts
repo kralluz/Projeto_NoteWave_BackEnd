@@ -1,13 +1,13 @@
 import { Router } from 'express';
 import {  bodyValidation, validateNotesId } from '../middlewares/globals.middleware';
 import { apiRateLimiter } from '../middlewares/apiRateLimiter.middleware';
-import { NotesController } from '../controllers/notes.controller';
+import { NotesController } from '../controllers/note.controller';
 import { createNoteSchema } from '../schemas/note.schema';
 
-export const notesRoutes: Router = Router();
+export const noteRoutes: Router = Router();
 
-notesRoutes.post('/', bodyValidation(createNoteSchema), apiRateLimiter, NotesController.createNotesByPageId);
-notesRoutes.get('/note', apiRateLimiter, NotesController.readNotesByPageId);
-notesRoutes.get('/:id',validateNotesId, apiRateLimiter, NotesController.readAllNotesByPageId);
-notesRoutes.patch('/:id',validateNotesId, apiRateLimiter, NotesController.updateNotesById);
-notesRoutes.delete('/:id',validateNotesId, apiRateLimiter, NotesController.deleteNotesById);
+noteRoutes.post('/', bodyValidation(createNoteSchema), apiRateLimiter, NotesController.createNotesByPageId);
+noteRoutes.get('/note', apiRateLimiter, NotesController.readNotesByPageId);
+noteRoutes.get('/:id',validateNotesId, apiRateLimiter, NotesController.readAllNotesByPageId);
+noteRoutes.patch('/:id',validateNotesId, apiRateLimiter, NotesController.updateNotesById);
+noteRoutes.delete('/:id',validateNotesId, apiRateLimiter, NotesController.deleteNotesById);
