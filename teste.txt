@@ -1,0 +1,32 @@
+BlackBeardAPI/
+|-- src/
+    |-- main/
+        |-- java/
+            |-- com/
+                |-- blackbeard/
+                    |-- api/
+                        |-- BlackBeardApplication.java      # Classe principal do Spring Boot
+                        |-- config/
+                            |-- RepositoryConfig.java       # Configuração de repositórios
+                        |-- controller/
+                            |-- ClientController.java       # Controlador para a entidade Client
+                        |-- dto/
+                            |-- ClientDTO.java              # DTO para transferência de dados de Client
+                        |-- exception/
+                            |-- ApiException.java           # Exceção personalizada
+                            |-- GlobalExceptionHandler.java # Controlador de exceções global
+                        |-- model/
+                            |-- Client.java                 # Modelo da entidade Client
+                        |-- repository/
+                            |-- ClientRepository.java       # Repositório para a entidade Client
+        |-- resources/
+            |-- application.properties   # Arquivo de configuração do Spring Boot
+    |-- test/                            # Diretório para testes
+        |-- java/
+            |-- com/
+                |-- blackbeard/
+                    |-- api/
+                        // Testes
+|-- pom.xml                             # Arquivo de configuração do Maven
+
+
